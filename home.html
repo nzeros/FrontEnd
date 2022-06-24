@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#"><img src="img/Captura.JPG" width="90px" height="50px"></a>
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        <a class="nav-link " href="home.html">Ayuda!</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <h1>Curso de Javascript</h1>
+        <!---------------------------------------------------------------------------------------------------------->
+        <div class="row justify-content-evenly mt-5"></div>
+        <div class="col-sm-12 col-md-12 col-lg-12" style="border: gray solid">
+            <form id="miForm" action="action_page.php">
+                <table class="table" id="miForm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Tienda de computación</th>
+                            <th scope="col">15% Descuento sobre compras superiores a $1.000.000</th>
+                            <th scope="col">Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="col">Productos</th>
+                            <th scope="col">Precio</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Placa Madre Intel</td>
+                            <td>$ 150.000</td>
+                            <td>
+                                <div class="mb-3">
+                                    <label for="pm" class="form-label"></label>
+                                    <input type="pm" class="form-control" id="pm">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Disco duro 500GB</td>
+                            <td>$ 30.000</td>
+                            <td>
+                                <div class="mb-3">
+                                    <label for="pm1" class="form-label"></label>
+                                    <input type="pm1" class="form-control" id="pm1">
+                            </td>
+                        </tr>
+                        <td>Memoria DDR3 2GB</td>
+                        <td>$ 15.000</td>
+                        <td>
+                            <div class="mb-3">
+                                <label for="pm2" class="form-label"></label>
+                                <input type="pm2" class="form-control" id="pm2">
+                        </td>
+                        </tr>
+                        <td>Gabinete ATX</td>
+                        <td>$ 20.000</td>
+                        <td>
+                            <div class="mb-3">
+                                <label for="pm3" class="form-label"></label>
+                                <input type="pm3" class="form-control" id="pm3">
+                        </td>
+                        </tr>
+                        <td></td>
+                        <td>Descuento 15%</td>
+                        <td>
+                            <div class="mb-3">
+                                <div id="desc"> </div>
+                                </tr>
+                        <td> </td>
+                        <td>PRECIO NETO</td>
+                        <td>
+                            <div class="mb-3">
+                                <div id="neto"> </div>
+                                </tr>
+                        <td> </td>
+                        <td>PRECIO NETO CON DESCUENTO</td>
+                        <td>
+                            <div class="mb-3">
+                                <div id="preciodesc"> </div>
+
+                                </tr>
+                        <td></td>
+                        <td>PRECIO TOTAL CON IVA 19%</td>
+                        <td>
+                            <div id="sumarproduc"> </div>
+                            <div id="totaliva"> </div>
+                            <hr>
+                            <div class="mb-3"> <button type="button" onclick="sumarproduc()"
+                                    class="btn btn-secondary">Calcular</button>
+                                <br>
+                            </div>
+                            <div class="mb-3"> <button class="btn btn-primary" type="button" value="Actualizar"
+                                    onclick="location.reload()">Limpiar</button> </button>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="row justify-content-evenly mt-5">
+            <div class="col-sm-12 col-md-5 col-lg-5" style="border: gray solid">
+                <h3>Deje sus datos de contacto:</h3>
+                <p>Restricción no permite enviar datos vacios</p>
+                <form action="https://portales.inacap.cl/" method="get" onsubmit="return validacion2()">
+                    <div class="mb-3">
+                        <label for="name" class="form-label"></label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre (Requerido)">
+                        <div class="mb-3">
+                            <label for="email" class="form-label"></label>
+                            <input type="text" class="form-control" id="email" placeholder="E-mail (Requerido)">
+                            <div class="mb-3">
+                                <label for="telephone" class="form-label"></label>
+                                <input type="tel" class="form-control" id="telefono" placeholder="Telefono (Requerido)"
+                                    maxlength="9">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label"> </label>
+                                <textarea class="form-control" id="mensaje" rows="3" placeholder="Mensaje"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+        <!--------------------------------------------------------------------------->
+
+        <H1>FAQ</H1>
+        <div class="row justify-content-evenly mt-5" >
+            <div class="col-sm-12 col-md-12 col-lg-7 mt-2"   style="border-radius: 10px; border: gray solid"  >
+                <h4 id="mostrar1">Pregunta numero 1 ?</h4>
+                <p id="p0" style="display:none ;">RESPUESTA NUMERO 1</p>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-7 mt-2"  style="border-radius: 10px; border: gray solid">
+                <h4 id="mostrar2">Pregunta numero 2 ?</h4>
+                <p id="p1" style="display:none ;">RESPUESTA NUMERO 2</p>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-7 mt-2"  style="border-radius: 10px; border: gray solid">
+                <h4 id="mostrar3">Pregunta numero 3 ?</h4>
+                <p id="p2" style="display:none ;">RESPUESTA NUMERO 3</p>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 mt-3">
+                <div class="preguntas">
+                    <div class="contenedor-preguntas activo">
+                        <div class="contenedor-pregunta">
+                            <p class="pregunta">Pregunta numero 1 ?</p>
+                            <p class="respuesta">RESPUESTA NUMERO 1</p>
+                        </div>
+                        <div class="contenedor-preguntas activo">
+                            <div class="contenedor-pregunta">
+                                <p class="pregunta">Pregunta numero 2 ?</p>
+                                <p class="respuesta">RESPUESTA NUMERO 2</p>
+                            </div>
+                            <div class="contenedor-preguntas activo">
+                                <div class="contenedor-pregunta">
+                                    <p class="pregunta">Pregunta numero 3 ?</p>
+                                    <p class="respuesta">RESPUESTA NUMERO 3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------------------------->
+        <div class="row justify-content-evenly bg-dark text-white mt-5">
+            <div class="col-sm-12 col-md-12 col-lg-3">
+                <div class="p-4 mb-2 bg-dark text-white " style="text-align:center ;">
+                    <p>Todos los derechos reservados 2022</p>
+                    <p>Celular: +56 2 25797204</p>
+                    <p>Telefono: 800 20 25 20</p>
+
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-3 mt-5">
+                <div class="icons">
+                    <a href="#" class="icon icon--instagram">
+                        <i class="ri-instagram-line"><img src="img/instagram-line.png" alt=""></i>
+                        <a href="#" class="icon icon--twitter">
+                            <i class="ri-twitter-line"> <img src="img/twitter-line.png" alt=""></i>
+                            <a href="#" class="icon icon--facebook">
+                                <i class="ri-facebook-line"> <img src="img/facebook-line.png" alt=""></i>
+                                <a href="#" class="icon icon--linkedin">
+                                    <i class="ri-linkedin-line"> <img src="img/linkedin-line.png" alt=""></i>
+                                    <a href="#" class="icon icon--github">
+                                        <i class="ri-github-line"> <img src="img/github-line.png" alt=""></i>
+                                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-3">
+                <div class="p-4 mb-2 bg-dark text-white " style="text-align:center ;">
+                    <p> Direccion: Casa Central | nuestras Sedes en googlemaps Av. Vitacura 10.151, Vitacura,
+                        Santiago - Chile</p>
+                    <p>Email: informaciones@coder.cl</p>
+
+                </div>
+
+            </div>
+
+            <!-------------------------------------------------------------------------->
+            <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+            <!-- Option 1: Bootstrap Bundle with Popper -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
+            <script src="js/home.js"></script>
+            <!-- Option 2: Separate Popper and Bootstrap JS -->
+            <!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+        </div>
+</body>
+
+</html>
