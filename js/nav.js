@@ -9,3 +9,4 @@ $(function(){
 $(function(){
   $("#foter").load("nav_foter/footer.html"); 
 });
+
